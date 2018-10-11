@@ -59,13 +59,13 @@ username=example202
 
 
 # Format:
-Required: pythonVersion fileName.py subreddit  
+Required: `pythonVersion fileName.py subreddit`  
 
-Optional: pythonVersion fileName.py subreddit numberToDownload minScore  
+Optional: `pythonVersion fileName.py subreddit numberToDownload minScore`  
 
-Example: python3 downloadtest1.py dankmemes 50 100  
+Example: `python3 downloadtest1.py dankmemes 50 100`  
 
-The above will return the first 50 submissions that have a score over 100 from r/dankmemes sorted by newest.  
+The above will return the first `50` submissions that have a score over `100` from `r/dankmemes` sorted by newest.  
 
 # Notes:
 
