@@ -13,7 +13,7 @@ Requests
 # Not included:
 A Praw.ini file. There is plenty of documentation on [Praw's Website](https://praw.readthedocs.io)
 
-# Format
+# Format:
 Required: pythonVersion fileName.py subreddit  
 
 Optional: pythonVersion fileName.py subreddit numberToDownload minScore  
@@ -22,5 +22,8 @@ Example: python3 downloadtest1.py dankmemes 50 100
 
 The above will return the first 50 submissions that have a score over 100 from r/dankmemes sorted by newest.  
 
-Direct any queries to u/aculisme  
+# Notes:
+
+Direct any queries to [u/aculisme](https://reddit.com/u/aculisme)  
+
 Have fun!
