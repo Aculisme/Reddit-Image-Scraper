@@ -1,0 +1,8 @@
+# ignore documents inside images folder
+images/*
+!images/.gitkeep
+# ignore praw.ini because it contains passwords
+praw.ini
+# ignore test files
+downloadtest2.py
+imgur-hosted-reddit-posted-downloader.py
