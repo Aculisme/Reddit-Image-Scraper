@@ -15,7 +15,7 @@ You can install all the dependencies by completing the following steps:
 1. Installing Python 3.7 [(for mac)](https://www.python.org/downloads/mac-osx/) [(for windows)](https://medium.com/@itylergarrett.tag/how-to-install-python-3-7-on-windows-10-pc-the-non-developer-version-b063e1913b39) 
 2. Installing pip3 [(for mac)](https://stackoverflow.com/questions/17271319/how-do-i-install-pip-on-macos-or-os-x) [(for windows)](https://stackoverflow.com/questions/4750806/how-do-i-install-pip-on-windows)
 3. Navigating to the cloned repository in terminal/command prompt
-4. Calling `pip install requirements.txt`
+4. Calling `pip install -r requirements.txt`
 
 # Not included:
 A Praw.ini file. There is plenty of documentation on [Praw's Website](https://praw.readthedocs.io).  
