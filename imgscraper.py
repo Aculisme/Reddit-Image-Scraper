@@ -1,27 +1,8 @@
 import praw, requests, urllib, shutil, os.path, sys
 
-# Aculisme's Reddit Image Downloader
-#
-# This tool is used to download images from a
-# target subreddit
-#
-# Format
-# required: pythonVersion fileName.py subreddit 
-# optional: numberToDownload minScore
-#
-# example: python3 downloadtest1.py dankmemes 50 100
-#
-# The above will return the first 50 submissions that 
-# have a score over 100 from r/dankmemes sorted by newest. 
-#
-#
-# Direct any queries to u/aculisme
-#
-# Have fun!
-
 r = praw.Reddit('client') 
 
-if len(sys.argv) >= 2:
+if len(sys.argv) >= 2 and len(sys.argv)<4:
     os.chdir('images/')
     # the subreddit was specified:
     targetSubreddit = sys.argv[1]
@@ -29,7 +10,7 @@ if len(sys.argv) >= 2:
     if not os.path.exists(subredditFolder):
         # create folder for subreddit
         os.makedirs(subredditFolder) 
-else:
+elif not len(sys.argv) >= 2:
     print("Remember to specify the target subreddit")
     sys.exit()
 
@@ -39,7 +20,14 @@ else:
     numberToDownload = 10
 
 if len(sys.argv) >= 4:
-    minScore = int(sys.argv[3])
+	minScore = int(sys.argv[3])
+	os.chdir('images/')
+	# the subreddit was specified:
+	targetSubreddit = sys.argv[1]
+	subredditFolder = targetSubreddit+"_"+str(minScore)+"/"
+	if not os.path.exists(subredditFolder):
+		# create folder for subreddit
+		os.makedirs(subredditFolder) 
 else:
     minScore = 0
 
@@ -67,7 +55,6 @@ for submission in r.subreddit(targetSubreddit).new(limit=maxToDownload):
         downloadImage(image,submission.id)
     except:
         continue
-    
 
 # switch back to the parent directory
 os.chdir("../../")     
